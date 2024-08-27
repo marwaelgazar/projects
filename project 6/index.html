@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookmark</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <!-- Bootstrap css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- css file -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <main class="main-content position-relative">
+      <div id="bookmark">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="caption my-4">
+                <h1 class="py-2">Bookmarker</h1>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-12">
+              <div
+                class="content w-100 d-flex justify-content-center align-items-center flex-column p-3 py-4 mt-3"
+              >
+                <h2>
+                  <i class="fa-solid fa-bookmark icon"></i>Bookmark your
+                  favorite sites<i class="fa-solid fa-bookmark icon"></i>
+                </h2>
+
+                <div
+                  class="w-100 d-flex justify-content-center flex-column site-name mb-4"
+                >
+                  <label for="webName" class="pb-2"
+                    ><i class="fa-solid fa-book-bookmark pe-2"></i>Site
+                    Name</label
+                  >
+                  <input
+                    type="text"
+                    id="webName"
+                    placeholder="Bookmark Name"
+                    class="form-control"
+                    minlength="3"
+                  />
+                </div>
+                <div
+                  class="w-100 d-flex justify-content-center flex-column site-url mb-4"
+                >
+                  <label for="webUrl" class="pb-2"
+                    ><i class="fa-solid fa-link"></i>Site URL</label
+                  >
+                  <input
+                    type="url"
+                    id="webUrl"
+                    placeholder="Website URL"
+                    class="form-control"
+                  />
+                </div>
+                <button class="btn px-5 submit-btn" onclick="add()">
+                  Submit
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="read">
+                <table class="table my-4 text-center">
+                  <thead>
+                    <tr>
+                      <th>Id</th>
+                      <th>Website Name</th>
+                      <th>Visit</th>
+                      <th>Delete</th>
+                    </tr>
+                  </thead>
+                  <tbody id="tableBody"></tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Start invalid Message -->
+        <!-- <div
+          class="box-info position-absolute start-0 top-0 w-100 h-100 d-flex justify-content-center align-items-center"
+          id="message"
+        >
+          <div class="box-conent bg-white p-4 rounded-2 shadow-lg">
+            <header
+              class="box-header w-100 d-flex justify-content-between align-items-center"
+            >
+              <div class="circles d-flex">
+                <span class="rounded-circle me-2 bg-danger"></span>
+                <span class="rounded-circle me-2 bg-warning"></span>
+                <span class="rounded-circle me-2 bg-success"></span>
+              </div>
+              <button class="btn border-0" id="closeBtn" onclick="closeBtn()">
+                <i class="fa-solid fa-xmark close fs-3"></i>
+              </button>
+            </header>
+            <p class="my-3 pb-2">
+              Site Name or Url is not valid, Please follow the rules below :
+            </p>
+            <ul class="rules list-unstyled m-0">
+              <li>
+                <i class="fa-regular fa-circle-right p-2"></i>Site name must
+                contain at least 3 characters
+              </li>
+              <li>
+                <i class="fa-regular fa-circle-right p-2"></i>Site URL must be a
+                valid one
+              </li>
+            </ul>
+          </div>
+        </div> -->
+        <!-- End invalid Message -->
+      </div>
+    </main>
+    <!-- Bootstrap JS -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- sweet alert -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- JS main file-->
+    <script src="js/main.js"></script>
+  </body>
+</html>
